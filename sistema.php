@@ -42,11 +42,7 @@ function inicio()
     $vidaPadrao = 100;
     $vida = obterMonstro()['vida'];
     if (($vida <= 0) || ($vida == null)) {
-        $sql = "UPDATE monstro SET vida = :valor WHERE id = :idMonstro";
-        $query = $pdo->prepare($sql);                                 
-        $query->bindParam(':valor', $vidaPadrao, PDO::PARAM_INT); 
-        $query->bindParam(':idMonstro', $idMonstro, PDO::PARAM_INT); 
-        $query->execute();
+        header("location:index.php");
     }
 }
 

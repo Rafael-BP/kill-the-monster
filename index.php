@@ -13,9 +13,11 @@
         <?php $listagem = listar(); ?>
         <div>
             <?php foreach($listagem as $item) { ?>
-                <?php echo $item['nome']; ?>
-                <?php echo $item['vida']; ?>
-                <a href="batalhar.php?monstro=<?php echo $item['id']; ?>"><button> Batalhar! </button></a>
+                <?php if ($item['vida'] > 0) { ?>
+                    <?php echo $item['nome']; ?>
+                    <?php echo $item['vida']; ?>
+                    <a href="batalhar.php?monstro=<?php echo $item['id']; ?>"><button> Batalhar! </button></a>
+                <?php } ?>
             <?php } ?>
         </div>
     </body>
