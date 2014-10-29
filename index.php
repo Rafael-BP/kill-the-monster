@@ -4,7 +4,7 @@
         require 'sistema.php';
     ?>
     <head>
-        <title>Mate o monstro!</title>
+        <title>Mate o monstro com seu grupo de amigos!</title>
         <meta http-equiv="content-type" content="html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -16,7 +16,7 @@
                 <?php if ($item['vida'] > 0) { ?>
                     <?php echo $item['nome']; ?>
                     <?php echo $item['vida']; ?>
-                    <a href="batalhar.php?monstro=<?php echo $item['id']; ?>"><button> Batalhar! </button></a>
+                    <a href="batalhar.php?monstro=<?php echo $item['id']; ?>"><button> Ajudar na batalha! </button></a>
                 <?php } ?>
                 <br/>
             <?php } ?>
