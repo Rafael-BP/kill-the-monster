@@ -18,6 +18,7 @@
                     <?php echo $item['vida']; ?>
                     <a href="batalhar.php?monstro=<?php echo $item['id']; ?>"><button> Batalhar! </button></a>
                 <?php } ?>
+                <br/>
             <?php } ?>
         </div>
     </body>
