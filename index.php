@@ -1,7 +1,6 @@
 <?php
 require 'sistema.php';
 inicio();
-causarDano(5);
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +13,13 @@ causarDano(5);
         <h1 id="nome"><?php obterMonstro()['nome'] ?></h1>
         <div id="imagem"><?php obterMonstro()['imagem'] ?></div><!-- Aqui colocar tag para ir imagem do monstro -->
         <div id="vida"><?php obterMonstro()['vida'] ?></div><!-- Aqui colocar uma progress bar com a % de vida -->
+        <div id="dano" style="color: red;"></div><!-- Aqui colocar uma progress bar com a % de vida -->
+        <br/>
+        <button onclick="causarDano()">Atacar fisicamente!</button>
+        <br/>
+        <button onclick="causarDano()">Atacar a distancia!</button>
+        <br/>
+        <button onclick="causarDano()">Usar magia!</button>
     </body>
 </html>
 
@@ -32,5 +38,14 @@ causarDano(5);
             }
         });
         setTimeout(atualizarDados, 500);
+    }
+    function causarDano() {
+        $.ajax({
+            type: "GET",
+            url: "dano.php?monstro=1",
+            success: function(data){
+                $('#dano').text('Dano causado no ultimo golpe ' + data);          
+            }
+        });
     }
 </script>

@@ -7,23 +7,6 @@ $pdo = connect_db();
 $idMonstro =  filter_input(INPUT_GET, 'monstro', FILTER_SANITIZE_NUMBER_INT);
 
 /*
-* Função para causar danos na vida do monstro
-* @param integer $valor
-* @return void
-*/
-function causarDano($valor) 
-{
-    global $pdo;
-    global $idMonstro;
-    $sql = "UPDATE monstro SET vida = :valor WHERE id = :idMonstro";
-    $query = $pdo->prepare($sql);   
-    $valor = obterMonstro()['vida'] - $valor;
-    $query->bindParam(':valor', $valor, PDO::PARAM_INT); 
-    $query->bindParam(':idMonstro', $idMonstro, PDO::PARAM_INT); 
-    $query->execute();
-}
-
-/*
 * Função para obter os dados do monstro
 * @return string
 */
