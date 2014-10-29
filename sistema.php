@@ -8,7 +8,7 @@ $idMonstro =  filter_input(INPUT_GET, 'monstro', FILTER_SANITIZE_NUMBER_INT);
 
 /*
 * Função para obter os dados do monstro
-* @return string
+* @return array
 */
 function obterMonstro() 
 {
@@ -17,6 +17,18 @@ function obterMonstro()
     $sql = "SELECT * FROM monstro WHERE id = " . $idMonstro;
     $resultado = $pdo->query($sql);
     return $resultado->fetch();
+}
+
+/*
+* Função para obter listagem de monstros
+* @return array
+*/
+function listar() 
+{
+    global $pdo;
+    $sql = "SELECT * FROM monstro";
+    $resultado = $pdo->query($sql);
+    return $resultado->fetchAll();
 }
 
 /*
