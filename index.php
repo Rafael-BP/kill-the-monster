@@ -13,7 +13,8 @@ inicio();
         <h1 id="nome"><?php obterMonstro()['nome'] ?></h1>
         <div id="imagem"><?php obterMonstro()['imagem'] ?></div><!-- Aqui colocar tag para ir imagem do monstro -->
         <div id="vida"><?php obterMonstro()['vida'] ?></div><!-- Aqui colocar uma progress bar com a % de vida -->
-        <div id="dano" style="color: red;"></div><!-- Aqui colocar uma progress bar com a % de vida -->
+        <div id="dano" style="color: red;"></div>
+        <div id="danoTotal" style="color: red;"></div>
         <br/>
         <button onclick="causarDano()">Atacar fisicamente!</button>
         <br/>
@@ -26,6 +27,7 @@ inicio();
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
 <script type="text/javascript">
     atualizarDados();
+    danoTotal = 0;
     function atualizarDados() {
         $.ajax({
             type: "GET",
@@ -44,7 +46,9 @@ inicio();
             type: "GET",
             url: "dano.php?monstro=1",
             success: function(data){
-                $('#dano').text('Dano causado no ultimo golpe ' + data);          
+                $('#dano').text('Dano causado no ultimo golpe ' + data);     
+                danoTotal += parseInt(data);
+                $('#danoTotal').text('Dano total causado: ' + danoTotal); 
             }
         });
     }
