@@ -6,7 +6,7 @@
     ?>
     <head>
         <title>Mate o monstro com seu grupo de amigos!</title>
-        <meta http-equiv="content-type" content="html; charset=utf-8" />
+        <meta http-equiv="content-type" content="text/html" charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style type="text/css">
             .oculto{
@@ -26,9 +26,7 @@
         <div id="botoesAtaque">
             <br/>      
             <button onclick="causarDano()">Atacar fisicamente!</button>
-            <br/>
             <button onclick="causarDano()">Atacar a distancia!</button>
-            <br/>
             <button onclick="causarDano()">Usar magia!</button> <br/>
         </div>
         <a href="index.php"><button id="voltar">Voltar</button></a>

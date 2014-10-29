@@ -5,7 +5,7 @@
     ?>
     <head>
         <title>Mate o monstro com seu grupo de amigos!</title>
-        <meta http-equiv="content-type" content="html; charset=utf-8" />
+        <meta http-equiv="content-type" content="text/html" charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>        
