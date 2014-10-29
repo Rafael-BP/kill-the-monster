@@ -53,7 +53,7 @@
                 $('#vida').text(res[2]);                
             }
         });
-        setTimeout(atualizarDados, 100);
+        setTimeout(atualizarDados, 300);
     }
     function causarDano() {
         $.ajax({
