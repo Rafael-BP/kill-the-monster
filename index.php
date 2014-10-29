@@ -16,6 +16,7 @@ inicio();
         </style>    
     </head>
     <body>
+        <input id="idMonstro" type="hidden" value="<?php echo $idMonstro ?>"/>
         <div id="vitoria" class="oculto" style="color: green;">Parabens! você derrotou este terrivel monstro!</div>
         <h1 id="nome"><?php obterMonstro()['nome'] ?></h1>
         <div id="imagem"><?php obterMonstro()['imagem'] ?></div><!-- Aqui colocar tag para ir imagem do monstro -->
@@ -45,7 +46,8 @@ inicio();
         }
         $.ajax({
             type: "GET",
-            url: "atualiza.php?monstro=1",
+            url: "ajax/atualiza.php",
+            data: "monstro="+$('#idMonstro').val(),
             success: function(data){
                 res = data.split(",");
                 $('#nome').text(res[0]);
@@ -58,7 +60,8 @@ inicio();
     function causarDano() {
         $.ajax({
             type: "GET",
-            url: "dano.php?monstro=1",
+            url: "ajax/dano.php",
+            data: "monstro="+$('#idMonstro').val(),
             success: function(data){
                 $('#dano').text('Dano causado no ultimo golpe ' + data);     
                 danoTotal += parseInt(data);

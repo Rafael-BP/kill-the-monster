@@ -1,7 +1,7 @@
 <?php
 
 $S_ = DIRECTORY_SEPARATOR;
-require 'bd' . $S_ . 'connection.php';
+require '..'.$S_.'bd'.$S_.'connection.php';
 
 $pdo = connect_db();
 $idMonstro =  filter_input(INPUT_GET, 'monstro', FILTER_SANITIZE_NUMBER_INT);
