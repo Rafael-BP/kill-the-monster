@@ -17,7 +17,7 @@
     </head>
     <body>
         <input id="idMonstro" type="hidden" value="<?php echo $idMonstro; ?>"/>
-        <div id="vitoria" class="oculto" style="color: green;">Parabens! você derrotou este terrivel monstro!</div>
+        <div id="vitoria" class="oculto" style="color: green;">Parabens! você e seus amigos derrotaram este terrivel monstro!</div>
         <h1 id="nome"><?php obterMonstro()['nome']; ?></h1>
         <div id="imagem"><?php obterMonstro()['imagem']; ?></div><!-- Aqui colocar tag para ir imagem do monstro -->
         <div id="vida"><?php obterMonstro()['vida']; ?></div><!-- Aqui colocar uma progress bar com a % de vida -->
@@ -31,7 +31,7 @@
             <br/>
             <button onclick="causarDano()">Usar magia!</button> <br/>
         </div>
-        <a href="index.php"><button id="voltar">Voltar</button></a><!-- Aqui deve voltar para o menu inicial -->
+        <a href="index.php"><button id="voltar">Voltar</button></a>
     </body>
 </html>
 
