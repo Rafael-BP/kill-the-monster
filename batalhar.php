@@ -47,10 +47,7 @@
             url: "ajax/atualiza.php",
             data: "monstro="+$('#idMonstro').val(),
             success: function(data){
-                res = data.split(",");
-                $('#nome').text(res[0]);
-                $('#imagem').text(res[1]);
-                $('#vida').text(res[2]);                
+                $('#imagem').text(data);             
             }
         });
         setTimeout(atualizarDados, 300);
