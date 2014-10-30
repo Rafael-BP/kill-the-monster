@@ -16,12 +16,15 @@
         </style>    
     </head>
     <body>
-        <h1 id="numero">Numero de aventureiros na batalha: <?php obterMonstro()['numero_batalha']; ?></h1>
         <input id="idMonstro" type="hidden" value="<?php echo $idMonstro; ?>"/>
-        <div id="vitoria" class="oculto" style="color: green;">Parabens! você e seus amigos derrotaram este terrivel monstro!</div>
-        <h1 id="nome"><?php obterMonstro()['nome']; ?></h1>
-        <div id="imagem"><?php obterMonstro()['imagem']; ?></div><!-- Aqui colocar tag para ir imagem do monstro -->
-        <div id="vida"><?php obterMonstro()['vida']; ?></div><!-- Aqui colocar uma progress bar com a % de vida -->
+        <h1 id="numero">Numero de aventureiros na batalha: <?php echo obterMonstro()['numero_batalha']; ?></h1><br/>
+        <div id="div-vitoria" class="oculto">
+            <div id="vitoria" style="color: green;">Parabens! você e seus amigos derrotaram este terrivel monstro!<br/> Sua recompensa é: <br/></div>        
+            <div id="recompensa"><?php echo obterMonstro()['recompensa']; ?></div><!-- Aqui colocar tag para ir imagem da recompensa -->
+        </div><br/>
+        <h1 id="nome"><?php echo obterMonstro()['nome'] ?></h1>
+        <div id="imagem"><?php echo obterMonstro()['imagem']; ?></div><!-- Aqui colocar tag para ir imagem do monstro -->
+        <div id="vida"><?php echo obterMonstro()['vida']; ?></div><!-- Aqui colocar uma progress bar com a % de vida -->
         <div id="dano" style="color: red;"></div>
         <div id="danoTotal" style="color: red;"></div>
         <div id="botoesAtaque">
@@ -45,7 +48,7 @@
     function atualizarDados() {
         if(parseInt($('#vida').text()) <= 0) {
             $('#botoesAtaque').addClass('oculto');
-            $('#vitoria').removeClass('oculto');
+            $('#div-vitoria').removeClass('oculto');
         }
         $.ajax({
             type: "GET",
