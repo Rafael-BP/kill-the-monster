@@ -7,6 +7,29 @@ $pdo = connect_db();
 $idMonstro =  filter_input(INPUT_GET, 'monstro', FILTER_SANITIZE_NUMBER_INT);
 
 /*
+ * Função criar
+ */
+function criar()
+{
+    global $pdo;
+    $sql = "INSERT INTO monstro(nome, imagem, recompensa, vida, vida_max)
+            VALUES (:nome, :imagem, :recompensa, :vida, :vidaMax)";                  
+    $resultado = $pdo->prepare($sql);      
+    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+    $imagem =  filter_input(INPUT_POST, 'imagem', FILTER_SANITIZE_STRING);
+    $recompensa = filter_input(INPUT_POST, 'recompensa', FILTER_SANITIZE_STRING);
+    $vida = filter_input(INPUT_POST, 'vida', FILTER_SANITIZE_NUMBER_INT);
+    $vidaMax = filter_input(INPUT_POST, 'vida', FILTER_SANITIZE_NUMBER_INT);
+    $resultado->bindParam(':nome', $nome, PDO::PARAM_STR); 
+    $resultado->bindParam(':imagem', $imagem, PDO::PARAM_STR);  
+    $resultado->bindParam(':recompensa', $recompensa, PDO::PARAM_STR);  
+    $resultado->bindParam(':vida', $vida, PDO::PARAM_INT);       
+    $resultado->bindParam(':vidaMax', $vidaMax, PDO::PARAM_INT);          
+    $resultado->execute(); 
+    header("location:index.php");
+}
+
+/*
 * Função para obter os dados do monstro
 * @return array
 */
