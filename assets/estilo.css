@@ -78,7 +78,7 @@ h1{
 
 .table-monster{
     background-color: #f2f2f2;
-    color: #e74c3c;
+    color: #222;
     text-align: right;
     box-shadow: 10px 10px 20px #111;
 }
@@ -101,5 +101,5 @@ form{
 }
 
 #nome{
-    color: #9b59b6;
+    color: #9b59b6;    
 }
