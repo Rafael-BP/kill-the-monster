@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+img{
+    width: 100%;
+    max-width: 500px;
+}
+
 .btn-custom{
     color: #ecf0f1 !important;
     background-color: #2dc86d;    
@@ -22,6 +27,18 @@
 .btn-lutar:hover{
     background-color: #e74c3c;
     color: #ecf0f1;
+}
+
+.btn-ataque{
+    background-color: #1abc9c;
+    color: #ecf0f1;
+    border-radius: 0px 0px;
+    border: #1abc9c solid 3px;
+}
+
+.btn-ataque:hover{
+    color: #ecf0f1;
+    border: #ecf0f1 solid 3px;
 }
 
 .btn-salvar{
@@ -77,4 +94,12 @@ form{
     background-color: #ededed;
     padding: 2% 2%;
     border-radius: 20px 20px;
+}
+
+.progress-bar{
+    background-color: #e74c3c;
+}
+
+#nome{
+    color: #9b59b6;
 }

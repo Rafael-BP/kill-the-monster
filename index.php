@@ -13,12 +13,11 @@
         
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid center">
+            <br/>
             <div class='row-fluid clearfix'>
-                <h1>
-                    Lute com o Monstro
-                </h1>
-            </div>
+                <img src="assets/img/title.png" alt=""/>
+            </div><br/>
             <div class='row-fluid clearfix center'>
                 <a href="criar.php" class='btn btn-custom btn-lg'>Criar novo monstro </a>
             </div><br/>
