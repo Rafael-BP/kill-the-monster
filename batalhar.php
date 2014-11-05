@@ -28,7 +28,7 @@
                 <div class="col-md-12">
                     <div id="div-vitoria" class="oculto">
                         <div id="vitoria" style="color: green;">Parabens! você e seus amigos derrotaram este terrível monstro!<br/> Sua recompensa é: <br/></div>        
-                        <div id="recompensa"><?php echo obterMonstro()['recompensa']; ?></div><!-- Aqui colocar tag para ir imagem da recompensa -->
+                        <div id="recompensa"><img src=""<?php echo obterMonstro()['recompensa']; ?>" alt='Reconpensa'/></div>
                     </div>
                 </div>
             </div>
