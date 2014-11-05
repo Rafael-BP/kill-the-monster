@@ -1,0 +1,39 @@
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn-custom{
+    color: #5df89d !important;
+    background-color: #2dc86d;    
+    border-radius: 0 0;
+}
+
+.btn-custom:hover{
+    border: white solid 3px;
+}
+
+.btn-lutar{
+    background-color: #ecf0f1;
+    color: #e74c3c;
+}
+
+.btn-lutar:hover{
+    background-color: #e74c3c;
+    color: #ecf0f1;
+}
+
+body{
+    background-color: #2c3e50;
+    color: #f2f2f2;
+}
+h1{
+    color: #2dc86d;
+}
+
+.table-monster{
+    background-color: #f2f2f2;
+    color: #e74c3c;
+    text-align: right;
+    box-shadow: 10px 10px 20px #111;
+}
