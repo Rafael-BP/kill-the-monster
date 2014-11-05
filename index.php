@@ -21,10 +21,10 @@
             </div>
             <div class='row-fluid clearfix center'>
                 <a href="criar.php" class='btn btn-custom btn-lg'>Criar novo monstro </a>
-            </div>
+            </div><br/>
             
             <?php $listagem = listar(); ?>
-            <div>
+            <div class="row-fluid clearfix">
                 <table class='table table-monster'>
                 <?php foreach($listagem as $item) { ?>
                     <?php if ($item['vida'] > 0) { ?>
@@ -34,7 +34,6 @@
                         <td><a href="batalhar.php?monstro=<?php echo $item['id']; ?>"><button class='btn btn-lutar'><i class='fa fa-shield'></i> Ajudar na batalha! </button></a></td>
                     </tr>
                     <?php } ?>
-                    <br/>
                 <?php } ?>
                 </table>
             </div>

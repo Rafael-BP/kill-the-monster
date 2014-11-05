@@ -4,13 +4,14 @@
 }
 
 .btn-custom{
-    color: #5df89d !important;
+    color: #ecf0f1 !important;
     background-color: #2dc86d;    
-    border-radius: 0 0;
+    border-radius: 0px 0px;
+    border: #2dc86d solid 3px;
 }
 
 .btn-custom:hover{
-    border: white solid 3px;
+    border: #ecf0f1 solid 3px;
 }
 
 .btn-lutar{
@@ -23,6 +24,29 @@
     color: #ecf0f1;
 }
 
+.btn-salvar{
+    background-color: #1abc9c;
+    color: #ecf0f1;
+    border-radius: 0px;
+    border: #1abc9c solid 3px;
+}
+
+.btn-salvar:hover{
+    color: #ecf0f1;
+     border: #222 solid 3px;
+}
+.btn-voltar{
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    border: #e74c3c solid 3px;
+    border-radius: 0px;
+}
+
+.btn-voltar:hover{
+    color: #ecf0f1;
+    border: #222 solid 3px;
+}
+
 body{
     background-color: #2c3e50;
     color: #f2f2f2;
@@ -31,9 +55,26 @@ h1{
     color: #2dc86d;
 }
 
+.control-label{
+    color: #9b9b9b;
+}
+
 .table-monster{
     background-color: #f2f2f2;
     color: #e74c3c;
     text-align: right;
     box-shadow: 10px 10px 20px #111;
+}
+
+.form-control{
+    background-color: #fff;
+    color: #222;
+    border-radius: 0 0;
+    border: none;
+}
+
+form{
+    background-color: #ededed;
+    padding: 2% 2%;
+    border-radius: 20px 20px;
 }
