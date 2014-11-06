@@ -23,8 +23,18 @@
             </div><br/>
             
             <?php $listagem = listar(); ?>
+            <?php if (count($listagem) > 0 ){?>
             <div class="row-fluid clearfix">
                 <table class='table table-monster'>
+                    <?php foreach($listagem as $item) { if ($item['vida'] != 0) { $header = true; break; } else { $header = false; } }?>
+                    <?php if ($header == true) { ?>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Vida</th>
+                        </tr>
+                    </thead>
+                    <?php } ?>
                 <?php foreach($listagem as $item) { ?>
                     <?php if ($item['vida'] > 0) { ?>
                     <tr>
@@ -36,6 +46,7 @@
                 <?php } ?>
                 </table>
             </div>
+            <?php } ?>
         </div>
         <script src="assets/js/jquery.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 

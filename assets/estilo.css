@@ -107,3 +107,8 @@ form{
 .div-vitoria{
     color: #ecf0f1;
 }
+
+th{
+    text-align: right;
+    color: #e74c3c;
+}
