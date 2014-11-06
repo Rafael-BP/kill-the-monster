@@ -49,7 +49,7 @@
                         $pvatual = ($vatual/$vtotal) * 100; 
                     ?>
                     
-                    <div class="progress-bar" role="progressbar" style="width: <?php echo $pvatual ?>%;">
+                    <div id="barraVida" class="progress-bar" role="progressbar" style="width: <?php echo $pvatual ?>%;">
                         <span id='vida'><?php echo obterMonstro()['vida']; ?></span>
                     </div>
                 </div>
@@ -93,9 +93,10 @@
                             data: "monstro=" + $('#idMonstro').val(),
                             success: function(data) {
                                 res = data.split(',');
-                                console.log(res);
                                 $('#vida').text(res[0]);
                                 $('#numero').text('Número de aventureiros na batalha: ' + res[1]);
+								console.log(res);
+								$('#barraVida').css('width', ((res[0] / res[2])*100) + '%');
                             }
                         });
                         setTimeout(atualizarDados, 300);
