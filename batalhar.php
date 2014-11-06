@@ -78,7 +78,10 @@
 <script type="text/javascript">
                     atualizarDados();
 					numeroBatalha(+1);
+					
+					function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
 					$(document).on("keydown", disableF5);
+					
                     danoTotal = 0;
                     $(window).unload(function() {
                         numeroBatalha(-1);
@@ -96,7 +99,6 @@
                                 res = data.split(',');
                                 $('#vida').text(res[0]);
                                 $('#numero').text('Número de aventureiros na batalha: ' + res[1]);
-								console.log(res);
 								$('#barraVida').css('width', ((res[0] / res[2])*100) + '%');
                             }
                         });
@@ -109,6 +111,7 @@
                             data: "monstro=" + $('#idMonstro').val(),
                             success: function(data) {
                                 $('#dano').text('Dano causado no último golpe ' + data);
+								console.log(data);
                                 danoTotal += parseInt(data);
                                 $('#danoTotal').text('Dano total causado: ' + danoTotal);
                             }
