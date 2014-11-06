@@ -53,7 +53,7 @@
                     <div class='form-group'>
                         <label class='col-md-2 control-label'>Vida:</label>
                         <div class='col-md-10'>
-                             <input required class="form-control" id="vida" name="vida"/>
+                            <input type="number" required class="form-control" id="vida" name="vida"/>
                         </div>
                     </div>
                     <div class="form-group">
