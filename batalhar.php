@@ -22,13 +22,14 @@
         <div class="container-fluid">
             <input id="idMonstro" type="hidden" value="<?php echo $idMonstro; ?>"/>
             <div class="row-fluid clearfix">
-                <h1 id="numero">Numero de aventureiros na batalha: <?php echo obterMonstro()['numero_batalha']; ?></h1><br/>
+                <h1 id="numero">Número de aventureiros na batalha: <?php echo obterMonstro()['numero_batalha']; ?></h1><br/>
             </div>
-            <div class="row-fluid clearfix">
+            <div class="row-fluid clearfix center">
                 <div class="col-md-12">
                     <div id="div-vitoria" class="oculto">
-                        <div id="vitoria" style="color: green;">Parabens! você e seus amigos derrotaram este terrível monstro!<br/> Sua recompensa é: <br/></div>        
-                        <div id="recompensa"><img src=""<?php echo obterMonstro()['recompensa']; ?>" alt='Recompensa'/></div>
+                        <div>Parabéns! você e seus amigos derrotaram este terrível monstro!<br/> Sua recompensa é: <br/></div>        
+                        <div id="recompensa"><img src="<?php echo obterMonstro()['recompensa']; ?>" alt="<?php echo obterMonstro()['recompensa']; ?>"/></div>
+                        <br/><a href="index.php"><button class='btn btn-voltar' id="voltar">Voltar</button></a>
                     </div>
                 </div>
             </div>
@@ -42,7 +43,13 @@
             </div><br/>
             <div class='row-fluid clearfix center'>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 60%;">
+                    <?php
+                        $vtotal = obterMonstro()['vida_max'];
+                        $vatual = obterMonstro()['vida'];
+                        $pvatual = ($vatual/$vtotal) * 100; 
+                    ?>
+                    
+                    <div class="progress-bar" role="progressbar" style="width: <?php echo $pvatual ?>%;">
                         <span id='vida'><?php echo obterMonstro()['vida']; ?></span>
                     </div>
                 </div>
@@ -88,7 +95,7 @@
                                 res = data.split(',');
                                 console.log(res);
                                 $('#vida').text(res[0]);
-                                $('#numero').text('Numero de aventureiros na batalha: ' + res[1]);
+                                $('#numero').text('Número de aventureiros na batalha: ' + res[1]);
                             }
                         });
                         setTimeout(atualizarDados, 300);
@@ -99,7 +106,7 @@
                             url: "ajax/dano.php",
                             data: "monstro=" + $('#idMonstro').val(),
                             success: function(data) {
-                                $('#dano').text('Dano causado no ultimo golpe ' + data);
+                                $('#dano').text('Dano causado no último golpe ' + data);
                                 danoTotal += parseInt(data);
                                 $('#danoTotal').text('Dano total causado: ' + danoTotal);
                             }

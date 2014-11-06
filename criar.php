@@ -20,35 +20,47 @@
                     </h1>
                 </div> 
                 <form class="form-horizontal" id="form-criacao" name="form-criacao" method="POST">
+                    <div class="form-group">
+                        <div class="col-md-10"></div>
+                        <div class="col-md-2">
+                            <select class="form-control" id="sugestoes">
+                                <option value="-1">Sugestões: </option>
+                                <option value="1">Blue Hat</option>
+                                <option value="2">Dragon</option>
+                                <option value="3">Radioactive Jelly</option>
+                                <option value="4">Yellow Thing</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class=form-group>
                         <label class='col-md-2 control-label'>Nome: </label>
                         <div class='col-md-10'>
-                            <input class='form-control' id="nome" name="nome"/>
+                            <input required class='form-control' id="nome" name="nome"/>
                         </div>
                     </div>
                     <div class='form-group'>
                         <label class='col-md-2 control-label'>Imagem:</label>
                         <div class='col-md-10'>
-                             <input class='form-control' id="imagem" name="imagem"/><br/>
+                             <input required class='form-control' id="imagem" name="imagem"/><br/>
                         </div>
                     </div>
                     <div class='form-group'>
                         <label class='col-md-2 control-label'>Recompensa:</label>
                         <div class='col-md-10'>
-                             <input class='form-control' id="recompensa" name="recompensa"/><br/>
+                             <input required class='form-control' id="recompensa" name="recompensa"/><br/>
                         </div>
                     </div>
                     <div class='form-group'>
                         <label class='col-md-2 control-label'>Vida:</label>
                         <div class='col-md-10'>
-                             <input class="form-control" id="vida" name="vida"/>
+                             <input required class="form-control" id="vida" name="vida"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-2"></div>
                         <div class="col-md-10">
                             <button class="btn btn-salvar" type="submit">Salvar</button>
-                            <a href="index.php"><button class="btn btn-voltar" id="voltar">Voltar</button></a>
+                            <a href="index.php"><button type="button" class="btn btn-voltar" id="voltar">Voltar</button></a>
                         </div>
                     </div>                    
                 </form>
@@ -56,7 +68,8 @@
         </div>        
     </body>
 </html>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/js/selector.js"></script>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     criar();
