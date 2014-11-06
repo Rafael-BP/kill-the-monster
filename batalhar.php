@@ -77,7 +77,8 @@
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
                     atualizarDados();
-                    numeroBatalha(+1);
+					numeroBatalha(+1);
+					$(document).on("keydown", disableF5);
                     danoTotal = 0;
                     $(window).unload(function() {
                         numeroBatalha(-1);
