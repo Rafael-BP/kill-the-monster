@@ -60,9 +60,6 @@ function listar()
  */
 function inicio()
 {
-    global $pdo;
-    global $idMonstro;
-    $vidaPadrao = 100;
     $vida = obterMonstro()['vida'];
     if (($vida <= 0) || ($vida == null)) {
         header("location:index.php");

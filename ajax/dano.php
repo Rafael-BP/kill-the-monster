@@ -21,10 +21,10 @@ if ($vidaFutura >= 0) {
     $query->execute();
 } else {
     $sql = "UPDATE monstro SET vida = 0 WHERE id = :idMonstro";
-    $valor = $vidaAtual;
+    $valor = (int) $vidaAtual;
     $query = $pdo->prepare($sql);   
     $query->bindParam(':idMonstro', $idMonstro, PDO::PARAM_INT); 
     $query->execute();
 }
-echo $valor;
+echo (int) $valor;
 ?>
