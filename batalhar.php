@@ -67,7 +67,7 @@
                 </div>
             </div><br/>
             <div class="row-fluid clearfix">
-                <a href="index.php"><button class='btn btn-voltar' id="voltar">Voltar</button></a>
+                <a href="index.php"><button class='btn btn-voltar' onclick="numeroBatalha(-1);"id="voltar">Voltar</button></a>
             </div>            
         </div>
     </body>
@@ -82,9 +82,6 @@
 					$(document).on("keydown", disableF5);
 					
                     danoTotal = 0;
-                    $(window).unload(function() {
-                        numeroBatalha(-1);
-                    });
                     function atualizarDados() {
                         if (parseInt($('#vida').text()) <= 0) {
                             $('#botoesAtaque').addClass('oculto');
