@@ -29,7 +29,6 @@
                     <div id="div-vitoria" class="oculto">
                         <div>Parabéns! você e seus amigos derrotaram este terrível monstro!<br/> Sua recompensa é: <br/></div>        
                         <div id="recompensa"><img src="<?php echo obterMonstro()['recompensa']; ?>" alt="<?php echo obterMonstro()['recompensa']; ?>"/></div>
-                        <br/><a href="index.php"><button class='btn btn-voltar' id="voltar">Voltar</button></a>
                     </div>
                 </div>
             </div>
