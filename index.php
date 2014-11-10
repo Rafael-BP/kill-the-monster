@@ -30,6 +30,7 @@
                     <?php if ($header == true) { ?>
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Nome</th>
                             <th>Vida</th>
                         </tr>
@@ -38,10 +39,12 @@
                 <?php foreach($listagem as $item) { ?>
                     <?php if ($item['vida'] > 0) { ?>
                     <tr>
+                        <td><img style="width: 60px; height: 60px;" src="<?php echo $item['imagem']; ?>" alt='<?php echo $item['imagem'] ?>'/></td>
                         <td><?php echo $item['nome']; ?></td>
                         <td><?php echo $item['vida']; ?></td>
                         <td><a href="batalhar.php?monstro=<?php echo $item['id']; ?>"><button class='btn btn-lutar'><i class='fa fa-shield'></i> Ajudar na batalha! </button></a></td>
                     </tr>
+                    <hr/>
                     <?php } ?>
                 <?php } ?>
                 </table>
