@@ -79,8 +79,12 @@ h1{
 .table-monster{
     background-color: #f2f2f2;
     color: #222;
-    text-align: right;
+    text-align: center;
     box-shadow: 10px 10px 20px #111;
+}
+
+td{
+    vertical-align: middle !important;
 }
 
 .form-control{
@@ -109,6 +113,6 @@ form{
 }
 
 th{
-    text-align: right;
+    text-align: center;
     color: #e74c3c;
 }
