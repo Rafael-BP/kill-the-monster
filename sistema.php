@@ -8,7 +8,7 @@ $idMonstro =  filter_input(INPUT_GET, 'monstro', FILTER_SANITIZE_NUMBER_INT);
 
 /*
  * Função criar
- * @return array
+ * @return void
  */
 function criar()
 {
